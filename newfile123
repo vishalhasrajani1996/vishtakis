@@ -1,0 +1,25 @@
+
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int Add(const int *arr,size_t N)
+{
+	int sum=0,i=0;
+
+	for(i=0;i<N;i++)
+	{
+		sum=sum+arr[i];
+	}
+
+	return sum;
+}
+
+int main(void)
+{
+	int mainarr[]={-32,1342,234,0,-23,23414,-6,534,134514,554,34};
+	size_t lenght = sizeof(mainarr)/sizeof(int);
+	int Sum = Add(mainarr,lenght);
+	printf("Sum of all elements in array is : %d ",Sum);
+	return 0;
+}
